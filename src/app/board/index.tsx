@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Column } from './columns';
+import Column from './columns';
 
 const Board = ({}) => (
   <div>
-    <Column>
+    <Column/>
   </div>
 );
 

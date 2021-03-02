@@ -5,7 +5,6 @@ import  Board  from './board';
 import './app.css';
 
 const App = () => {
-    const dispatch = useDispatch();
     return <div className="App">
         <header className="App-header">
             <Board />
