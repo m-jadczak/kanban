@@ -1,0 +1,25 @@
+.bin-body{
+  background-color: red;
+  width: 100%;
+  height: 9rem;
+  background:center / contain no-repeat url("bin.svg") ;
+  position: relative;
+}
+
+.bin-body::after{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background:center / contain no-repeat url("lidlessbin.svg") ;
+  content: "";
+  z-index: 1;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.bin-over::after{
+  opacity: 1;
+}

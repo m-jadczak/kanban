@@ -1,0 +1,52 @@
+.input{
+  background-color: #0000;
+  text-align: left;
+  width: 100%;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-family: "Montserrat";
+  text-overflow: ellipsis;
+  font-size: 2rem
+}
+
+.input:focus{
+  outline: none;
+}
+
+
+.label{
+  color: inherit;
+  font-size: 2rem;
+  width: 100%;
+  display: block;
+}
+
+.label-content-container{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.5s;
+  padding-right: 1.5rem;
+}
+
+.label-content{
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  justify-content: left;
+  align-items: center;
+  text-overflow: ellipsis;
+}
+
+.input:focus + .label-content-container{
+  opacity: 0;
+  transform: translateX(-10%);
+}

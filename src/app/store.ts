@@ -1,13 +1,25 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from './counter/counterSlice';
-import boardReducer from './board/state';
+import boardReducer from './board/boardReducer';
+import {loadState,saveState} from 'app/common/utils/localStorage';
+import throttle from 'lodash/throttle';
 
-export const store = configureStore({
+
+const persistedState = loadState();
+
+
+export const store =  configureStore({
   reducer: {
-    counter: counterReducer,
-    columns: boardReducer
+    board: boardReducer
   },
+  preloadedState:persistedState
 });
+
+store.subscribe(throttle(() => {
+  saveState({
+    board: store.getState().board
+  });
+}, 500));
+
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppThunk<ReturnType = void> = ThunkAction<

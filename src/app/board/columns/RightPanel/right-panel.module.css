@@ -1,0 +1,38 @@
+.right-panel-body{
+  flex-direction: column;
+  padding: 0;
+}
+
+
+
+.area{
+  padding: 0.5rem;
+  border: 0.15rem #424342;
+  border-style: dotted;
+  border-radius: 1rem;
+}
+
+.color-picker{
+  composes: area;
+  max-height: 9rem;
+}
+
+.ol{
+  composes: area;
+  text-align: left;
+}
+
+.ol li{
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.add-title{
+  font-size: 2rem;
+}
+
+@media (hover:none) {
+  .color-picker{
+    max-height: 12rem;
+  }
+}

@@ -1,0 +1,48 @@
+.textarea{
+  background-color: #0000;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 100%;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-family: "Montserrat";
+  height: 100%
+}
+
+.textarea:focus{
+  outline: none;
+}
+
+
+.label{
+  color: inherit;
+  font-size: 1.5rem;
+  width: 100%;
+  display: block;
+  height: 200px;
+  position: relative;
+}
+
+.label-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  transition: opacity 0.2s, transform 0.5s;
+  pointer-events: none;
+}
+
+.textarea:focus + .label-content{
+  opacity: 0;
+  transform: translateX(-10%);
+}
+
+@media (hover:none) {
+  .label{
+    height: 100px;
+  }
+}
