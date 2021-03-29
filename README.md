@@ -1,3 +1,13 @@
+## Info
+Kanban board with customizable features:
+
+- custom number of column
+- drag and drop
+- editable titles
+- customizable color of cards 
+
+See live project https://kanban.jdev.pl/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
