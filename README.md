@@ -4,7 +4,8 @@ Kanban board with customizable features:
 - custom number of column
 - drag and drop
 - editable titles
-- customizable color of cards 
+- customizable color of cards
+- data stored in local storage 
 
 See live project https://kanban.jdev.pl/
 
